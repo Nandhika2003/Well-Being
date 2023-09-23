@@ -1,0 +1,256 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+  background: url('/about-us/images/background.jpg') no-repeat;
+  background-size: cover;
+}
+
+.top{
+    height: 300px;
+}
+.container{
+    text-align: centre;
+    margin-top: 25px;
+}
+
+.container h1{
+   font-size: 60px;
+   color: white; 
+   margin-bottom: 10px;
+   text-align: center;
+   box-shadow: darkblue;
+}
+.container h1:hover{
+  color: orange;
+}
+
+.about_us{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+
+.about_us img{
+    flex:0 50%;
+    max-width: 100%;
+    height: 300px;
+    width: 800px;
+    margin-right: 50px;
+}
+
+.content{
+    padding: 35px;
+}
+
+.content h2{
+    color:white;
+    font-size : 30px;
+    line-height: 1.5;
+    margin: 15px 0px;
+}
+
+
+.content p{
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px 0px;
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+
+.middle img{
+    flex:0 50%;
+    max-width: 80%;
+    height: 300px;
+    margin-right: 50px;
+    width:330px;
+}
+
+.middles{
+    padding: 35px;
+}
+
+.middles h2{
+    color:white;
+    font-size : 30px;
+    line-height: 1.5;
+    margin: 15px 0px;
+}
+
+.middles p{
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px 0px;
+   
+}
+
+.bottom{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap:1.5rem;
+   
+}
+
+h2{
+    color:white;
+    font-size : 30px;
+    line-height: 1.5;
+    margin: 15px 0px;
+    padding-left: 40px;;
+}
+
+.side{
+    padding: 35px;
+}
+.side h2{
+  font-size: var(--h2-font);
+  line-height: 1;
+  color:white;
+}
+.side p{
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px 0px;
+}
+
+.wrapper {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-left: 300px;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: trans   ;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carousel .card:hover{
+    border: 2px solid black;
+  }
+  .carousel .card .img {
+    background: #8B53FF;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+  }
+  .card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin-right: 40px;
+  }
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+ 
+
+@media(max-width: 768px){
+    .about_us{
+        flex-direction: column;
+    }
+    .about_us img{
+        flex: 0 100%;
+        max-width: 100%;
+    }
+    .content{
+        flex: 0 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
+
