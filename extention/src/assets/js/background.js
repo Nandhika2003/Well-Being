@@ -1,3 +1,4 @@
+import data from './data';
 import utils, { CONFIGKEY, DATAKEY } from './utils';
 
 const cacheStorage = {
@@ -115,4 +116,16 @@ const synchronize = async (fetchData = false) => {
       synchronize();
     }
   });
+
+  function fetchData() {
+    return { someData: data };
+  }
+  
+  chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    if (request.action === 'fetchData') {
+      const data = fetchData();
+      sendResponse(data);
+    }
+  });
+  
 }());

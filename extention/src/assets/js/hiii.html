@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="data-container"></div>
+
+
+    <script>
+        chrome.runtime.sendMessage(
+          { action: 'fetchData' },
+          function (response) {
+            if (chrome.runtime.lastError) {
+              console.error(chrome.runtime.lastError);
+            } else {
+              // Handle the received data here
+              console.log(response.someData);
+      
+              // Display the data on your website
+              document.getElementById('data-container').textContent = response.someData;
+            }
+          }
+        );
+      </script>
+      
+</body>
+</html>
