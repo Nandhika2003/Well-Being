@@ -23,6 +23,9 @@
       "notifications",
       "tabs",
       "activeTab",
+      "webNavigation",
+      "webRequest",
+      "nativeMessaging",
       "http://127.0.0.1:5500/src/assets/js/hiii.html"
     ],
     "content_security_policy": "script-src 'self'; object-src 'self'"
