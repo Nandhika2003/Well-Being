@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Mental Health</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <audio id="background-audio" autoplay loop>
+        <source src="background-music.mp3" type="audio/mp3">
+    </audio>
+
+    <main class="main">
+        <header class="header">
+            <a href="#" class="logo">Well Being</a>
+
+            <nav class="navbar">
+                <a href="/dashboard/d2.html">Home</a>
+                <a href="/about-us/aboutus.html">About Us</a>
+                <a href="/dashboard/d2.html">Services</a>
+                <a href="/about-us/aboutus.html">Contact</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>Mental Quiz</h1>
+                    <div class="quiz-header">
+                    </div>
+
+                    <h2 class="question-text">Do you often feel overwhelmed by your daily tasks and responsibilities?</h2>
+
+                    <div class="option-list"></div>
+
+                    <div class="quiz-footer">
+                        <span class="question-total">1 of 18 questions</span>
+                        <button class="next-btn">Next</button>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <h2>Mental Health Summary</h2>
+                    <div class="stress-result"></div>
+                    <div class="anxiety-result"></div>
+                    <div class="social-pressure-result"></div>
+                    <div class="online-harassment-result"></div>
+                    <div class="well-being-result"></div>
+                    <div class="information-overload-result"></div>
+                    <div class="buttons">
+                        <button class="gohomebtn">Go To Home</button>
+                    </div>
+                </div>
+            </section>
+            <section class="quizpage">
+                <div class="quiz-content">
+                    <h1>Take a Step to a Healthier Mind</h1>
+                    <p>Welcome to Wellbeing! Take our quiz to uncover your digital well-being. Discover how your online habits impact your mental health 
+                        and receive personalized recommendations for a healthier, more balanced life in the digital age. Start your journey to digital balance and mental 
+                        wellness today!
+                    </p>
+                    <button class="startbtn">Start Quiz</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="popup">
+        <h2>Instructions</h2>
+        <span class="info">1.Please answer each question truthfully to provide accurate insights.</span>
+        <span class="info">2.There are no right or wrong answers; it's about understanding your unique experiences.</span>
+        <span class="info">3.Take your time to reflect on each question; there's no rush.</span>
+        <span class="info">4.To get a comprehensive assessment, please complete all questions.</span>
+        <span class="info">5.Your responses are confidential; your privacy matters, and your data will be handled securely and anonymously.</span>
+    
+        <div class="btn-group">
+            <button class="info-btn exit">Exit Quiz</button>
+            <a href="#" class="info-btn continue">Continue</a>
+        </div>
+    
+    
+    </div>
+
+    <script src="script.js"></script>
+    <script src="question.js"></script>
+    <script src="report.js"></script>
+</body>
+</html>
